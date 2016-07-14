@@ -1,0 +1,17 @@
+<template name="recipes">
+    {{> newrecipe }}
+<!-- <section> defines sections in a document -->
+    <section class="recipes">
+    <!-- Load subscriptionsReady if template is ready -->
+        {{#if Template.subscriptionsReady}}
+            {{#each recipes}}
+                {{> recipe}}
+            {{/each}}
+    <!-- if it isn't loaded display this text -->
+        {{else}}
+            <p>Loading</p>
+        {{/if}}        
+
+    </section>
+    
+</template>

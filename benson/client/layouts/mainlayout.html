@@ -1,0 +1,10 @@
+<template name="mainlayout">
+   <!-- refers to header.html -->
+    {{> header}}
+    <!-- refers to sidenav.html -->
+    {{>sidenav}}
+    <!-- use template "main-layout" from styls.styl which is a dynamic template -->
+    <main class="main-layout">
+        {{> Template.dynamic template=main}}
+    </main>
+</template>

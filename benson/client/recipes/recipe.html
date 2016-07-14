@@ -1,0 +1,29 @@
+<template name="recipe ">
+<!-- class refers to styles.styl -->
+<!-- if in menu is, we want class of in-menu to display in recipe from styles.styl -->
+    <article class="recipe {{#if inMenu}}in-menu{{/if}}">
+<!-- <h3> smaller header -->
+        <h3>{{name}}</h3>
+        
+<!--<p> means paragraph-->
+        
+        <p>{{desc}}</p>
+        
+<!-- {{#each}} renders each ingredient seperately -->
+        <p>
+            {{#each ingredients}}
+<!-- <span> groups inline elements doc , same line-->
+                <span class="ingredient">{{name}} - {{amount}}</span>
+            {{/each}}
+        </p>
+        
+<!-- <a> is a hyperlink reference -->
+<!-- "View Details" is the name of the buton -->
+        <a href="/recipe/{{_id}}">View Details</a>
+
+<!--button means button -->
+<!-- toggle-menu means that you toggle y/n on the form -->       
+        <button class="btn-primary toggle-menu">Add to Menu</button>
+        <button class="btn-deny toggle-menu">Kill from Menu</button>
+    </article>
+</template>
